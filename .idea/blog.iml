@@ -127,6 +127,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actionview (v4.1.0.beta1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.1.0.beta1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.1.0.beta1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord-session_store (v0.1.0@55dc59, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.0.beta1, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.0, RVM: ruby-2.0.0-p353) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, RVM: ruby-2.0.0-p353) [gem]" level="application" />
