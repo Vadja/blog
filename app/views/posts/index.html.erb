@@ -1,5 +1,11 @@
-<%= link_to 'New post', new_post_path %>
 <h1>Listing Posts</h1>
+<% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+    <%= link_to 'New post', new_post_path %>
+    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+<% else %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+<% end %>
 <table>
   <tr>
     <th>Title</th>
