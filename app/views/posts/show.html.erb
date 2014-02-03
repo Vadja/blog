@@ -1,4 +1,11 @@
 <% if user_signed_in? %>
+    <span>Welcome, <%= current_user.email %></span>
+    <%= link_to 'Exit', destroy_user_session_path, :method => :delete %><br>
+<% else %>
+    <%= link_to 'Enter', new_user_session_path %> or <%= link_to 'Register', new_user_registration_path %>
+<% end %>
+
+<% if user_signed_in? %>
     <p>
       <strong>Author:</strong>
       <%= @post.author %>
