@@ -1,23 +1,48 @@
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
+<% if user_signed_in? %>
+    <p>
+      <strong>Author:</strong>
+      <%= @post.author %>
+    </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @post.title %>
+    </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+    <p>
+      <strong>Text:</strong>
+      <%= @post.text %>
+    </p>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
+    <h2>Comments</h2>
+    <%= render @post.comments %>
 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+    <h2>Add a comment:</h2>
+    <%= render "comments/form" %>
 
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Back to Posts', posts_path %>
+    <%= link_to 'Edit Post', edit_post_path(@post) %> |
+    <%= link_to 'Back to Posts', posts_path %>
+
+<% else %>
+    <p>
+      <strong>Author:</strong>
+      <%= @post.author %>
+    </p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @post.title %>
+    </p>
+
+    <p>
+      <strong>Text:</strong>
+      <%= @post.text %>
+    </p>
+
+    <h2>Comments</h2>
+    <%= render @post.comments %>
+
+    <h2>Add a comment:</h2>
+    <%= render "comments/form" %>
+    <%= link_to 'Back to Posts', posts_path %>
+<% end %>
