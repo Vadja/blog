@@ -1,8 +1,8 @@
 <h1>Listing Posts</h1>
 <% if user_signed_in? %>
+    <%= link_to 'New post', new_post_path %><br>
     <span>Welcome, <%= current_user.email %></span>
-    <%= link_to 'Exit', destroy_user_session_path, :method => :delete %><br>
-    <%= link_to 'New post', new_post_path %>
+    <%= link_to 'Exit', destroy_user_session_path, :method => :delete %>
 <% else %>
     <%= link_to 'Enter', new_user_session_path %> or <%= link_to 'Register', new_user_registration_path %>
 <% end %>
